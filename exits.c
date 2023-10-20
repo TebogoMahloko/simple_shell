@@ -10,26 +10,28 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-    int i = 0;
-    char *s = dest;
+	char *s = dest;
 
-    while (src[i] != '\0' && i < n - 1)
-    {
-        dest[i] = src[i];
-        i++;
-    }
+	int i = 0;
 
-    if (i < n)
-    {
-        int j = i;
-        while (j < n)
-        {
-            dest[j] = '\0';
-            j++;
-        }
-    }
+	while (src[i] != '\0' && i < n - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
 
-    return s;
+	if (i < n)
+	{
+		int j = i;
+
+		while (j < n)
+		{
+			dest[j] = '\0';
+			j++;
+		}
+	}
+
+	return (s);
 }
 
 /**
@@ -42,27 +44,27 @@ char *_strncpy(char *dest, char *src, int n)
  */
 char *_strncat(char *dest, char *src, int n)
 {
-    int i = 0;
-    int j = 0;
-    char *s = dest;
+	char *s = dest;
 
-    while (dest[i] != '\0')
-    {
-        i++;
-    }
+	int i = 0;
+	int j = 0;
 
-    while (src[j] != '\0' && j < n)
-    {
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
 
-    dest[i] = '\0';
+	while (src[j] != '\0' && j < n)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
-    return s;
+	dest[i] = '\0';
+
+	return (s);
 }
-
 
 /**
  * _strchr - Locate a character in a string.
@@ -73,13 +75,12 @@ char *_strncat(char *dest, char *src, int n)
  */
 char *_strchr(char *s, char c)
 {
-    do {
-        if (*s == c)
-        {
-            return s;
-        }
-    } while (*s++ != '\0');
+	do {
+		if (*s == c)
+		{
+			return (s);
+		}
+	} while (*s++ != '\0');
 
-    return NULL;
+	return (NULL);
 }
-

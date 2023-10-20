@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * interactive - returns true if shell is interactive mode
+ * interactive - returns true if the shell is in interactive mode
  * @info: structure address
  *
- * Return: 1 when  interactive mode, 0 otherwise
+ * Return: 1 when in interactive mode, 0 otherwise
  */
 int interactive(info_t *info)
 {
@@ -20,15 +20,13 @@ int interactive(info_t *info)
  */
 int is_delim(char c, char *delim)
 {
-    for (; *delim; delim++)
-    {
-        if (*delim == c)
-            return 1;
-    }
-    return 0;
+	for (; *delim; delim++)
+	{
+		if (*delim == c)
+			return (1);
+	}
+	return (0);
 }
-
-
 
 /**
  * _isalpha - Checks if a character is an alphabetic character.
@@ -38,13 +36,12 @@ int is_delim(char c, char *delim)
  */
 int _isalpha(int c)
 {
-	/* Optimized: Combine conditions into a single return statement */
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ? 1 : 0);
 }
 
 /**
  * _atoi - Converts a string to an integer
- * s: The string to convert
+ * @s: The string to convert
  *
  * Return: The integer converted from the string
  */
